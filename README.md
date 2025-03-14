@@ -55,8 +55,3 @@ Level up your job hunting game with SkillMatch. Drop your skills, get those job 
 ---
 
 Made with ❤️ by Ansh Kumar Tripathi
-
-```
-
-Hope you like it! Let me know if you need any more tweaks or if there's anything else I can help with. Let's make your project shine! 🚀
-```
