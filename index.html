@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillMatch</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="data-mockup.js"></script>
+</head>
+
+<body class="bg-gray-900 text-white">
+  <header class="bg-gray-800 py-6">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-4xl font-bold text-blue-500">SkillMatch</h1>
+        <p class="mt-2 text-gray-400">Match your skills with job recommendations effortlessly. Enter your Credly profile
+          link or type in your skills, and let us do the rest!</p>
+      </div>
+      <div>
+        <label for="theme-toggle" class="inline-flex items-center cursor-pointer">
+          <span class="text-gray-400 mr-2">Dark Mode</span>
+          <input type="checkbox" id="theme-toggle" class="hidden">
+          <span class="bg-gray-600 w-10 h-6 rounded-full flex items-center p-1">
+            <span class="bg-white w-4 h-4 rounded-full transform transition-transform duration-300 ease-in-out"></span>
+          </span>
+        </label>
+      </div>
+    </div>
+  </header>
+  <div class="container mx-auto py-10 px-4">
+    <form id="profile-form" class="mt-8 max-w-lg mx-auto bg-gray-800 p-8 shadow-md rounded-lg neon-border">
+      <label class="block mb-4">
+        <span class="text-gray-400">Enter your Credly profile link:</span>
+        <input type="text" id="profile-link"
+          class="w-full p-3 border border-gray-700 rounded bg-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500"
+          placeholder="Credly profile link">
+      </label>
+      <label class="block mb-4">
+        <span class="text-gray-400">Or enter your skills (comma-separated):</span>
+        <input type="text" id="manual-skills"
+          class="w-full p-3 border border-gray-700 rounded bg-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500"
+          placeholder="e.g., JavaScript, Python, React">
+      </label>
+      <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-400">Find Jobs</button>
+    </form>
+    <div id="skills-list" class="mt-10 max-w-lg mx-auto bg-gray-800 p-8 shadow-md rounded-lg hidden neon-border">
+      <h2 class="text-2xl font-bold mb-4">Your Skills</h2>
+      <div id="skills-results" class="flex flex-wrap gap-2"></div>
+    </div>
+    <div id="job-list" class="mt-10 max-w-lg mx-auto bg-gray-800 p-8 shadow-md rounded-lg hidden neon-border">
+      <h2 class="text-2xl font-bold mb-4">Job Recommendations</h2>
+      <div id="job-results" class="flex flex-wrap gap-2"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
